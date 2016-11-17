@@ -1,0 +1,71 @@
+<ion-view title="Start" class="anim-in-out anim-fade" data-anim-in-speed="1000" data-anim-sync="true" hide-nav-bar="true">
+  <menu-btn btn-class="menu-btn--dark"></menu-btn>
+  <ion-content class="login-view">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col col-75">
+        <h2>Registration</h2>
+        <form name="login-form" class="login-form" data-ng-submit="register(user)">
+
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" id="email" name="email" placeholder="Enter Email"
+                           data-ng-model="user.email" class="form-control">
+                </label>
+
+                <label class="item item-input {'has-error' : identical === false}">
+                    <input type="password" id="password" name="password" placeholder="Enter Password"
+                           data-ng-model="user.new_password" class="form-control"
+                           data-ng-keyup="verifyPassword(user)" >
+                </label>
+
+                <label class="item item-input {'has-error' : identical === false}">
+                    <input
+                      type="password"
+                      id="verify-password"
+                      name="verify-password"
+                      class="form-control"
+                      placeholder="Verify Password"
+                      data-ng-model="user.verify_password"
+                      data-ng-keyup="verifyPassword(user)" >
+                </label>
+
+                <label class="item item-input {'has-error' : identical === false}" >
+                    <input
+                      type="text"
+                      id="optional-activation-code"
+                      name="activationCode"
+                      class="form-control"
+                      placeholder="Activation Code (leave blank for preview)"
+                      data-ng-model="user.activationCode"
+                      data-ng-keyup="verifyPassword(user)">
+                </label>
+
+                <label>
+                    <input
+                      class="button button-positive submit-button"
+                      id="submit-login"
+                      type="submit"
+                      value="Register">
+                </label>
+
+                <div data-ng-controller="MessageCtrl" class="message-section">
+                    <label data-ng-if="currentError">
+                        <div class="alert alert-danger alert-dismissable">
+                            {{currentError}}
+                            <button class="close icon ion-ios7-close" data-ng-click="clearError()"></button>
+                        </div>
+                    </label>
+                    <label data-ng-if="currentInfo">
+                        <div class="info">
+                            {{currentInfo}}
+                            <button class="close icon ion-ios7-close" data-ng-click="clearInfo()"></button>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

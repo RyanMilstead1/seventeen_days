@@ -1,0 +1,28 @@
+<ion-view title="Birth Control" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="bcmain.html">
+          <choice-menu background="bcmenu.png">
+            <choice-btn link-class="emergency" choice="bc1a"></choice-btn>
+            <choice-btn link-class="thepill" choice="bc1b"></choice-btn>
+            <choice-btn link-class="deposhot" choice="bc1c"></choice-btn>
+            <choice-btn link-class="nuvaring" choice="bc1d"></choice-btn>
+            <choice-btn link-class="patch" choice="bc1e"></choice-btn>
+            <choice-btn link-class="condoms" choice="bc1f"></choice-btn>
+            <choice-btn link-class="implant" choice="bc1g"></choice-btn>
+            <choice-btn link-class="iud" choice="bc1h"></choice-btn>
+            <choice-btn link-class="otherMethods" choice="bc1i"></choice-btn>
+            <choice-btn link-class="goBack" section="jessica"></choice-btn>
+          </choice-menu>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

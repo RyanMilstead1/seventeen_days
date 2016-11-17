@@ -1,0 +1,17 @@
+<ion-view title="End" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <choice-menu-cog-btn background="opencog1.jpg" ng-switch-when="opencog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="opencog2.jpg" ng-switch-when="open2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="opencog3.jpg" ng-switch-when="open3.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

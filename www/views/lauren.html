@@ -1,0 +1,48 @@
+<ion-view title="Lauren" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="laurenchoice1.html">
+          <choice-menu background="laurenchoice1.jpg">
+            <choice-btn link-class="laurenChoice1a" choice="laurenchoice1a"></choice-btn>
+            <choice-btn link-class="laurenChoice1b" choice="laurenchoice1b"></choice-btn>
+            <choice-btn link-class="laurenChoice1c" choice="laurenchoice1c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="laurenchoice2.html">
+          <choice-menu background="laurenchoice2.jpg">
+            <choice-btn link-class="laurenChoice2c" choice="laurenchoice2c"></choice-btn>
+            <choice-btn link-class="laurenChoice2a" choice="laurenchoice2a"></choice-btn>
+            <choice-btn link-class="laurenChoice2b" choice="laurenchoice2b"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="laurenchoice3.html">
+          <choice-menu background="laurenchoice3.jpg">
+            <choice-btn link-class="laurenChoice3b" choice="laurenchoice3b"></choice-btn>
+            <choice-btn link-class="laurenChoice3a" choice="laurenchoice3a"></choice-btn>
+            <choice-btn link-class="laurenChoice3c" choice="laurenchoice3c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="laurenchoice4.html">
+          <choice-menu background="laurenchoice4.jpg">
+            <choice-btn link-class="laurenChoice4a" choice="laurenchoice4a"></choice-btn>
+            <choice-btn link-class="laurenChoice4c" choice="laurenchoice4c"></choice-btn>
+            <choice-btn link-class="laurenChoice4b" choice="laurenchoice4b"></choice-btn>
+          </choice-menu>
+        </div>
+        <choice-menu-cog-btn link-class="laurenCog1" background="laurencog1.jpg" ng-switch-when="laurencog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="laurenCog2" background="laurencog2.jpg" ng-switch-when="laurencog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="laurenCog3" background="laurencog3.jpg" ng-switch-when="laurencog3.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="laurenCog4" background="laurencog4.jpg" ng-switch-when="laurencog4.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="laurenCog5" background="laurencog4-1.jpg" ng-switch-when="laurencog4-1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="laurenCog6" background="laurencog4-2.jpg" ng-switch-when="laurencog4-2.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

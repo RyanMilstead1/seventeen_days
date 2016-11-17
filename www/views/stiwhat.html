@@ -1,0 +1,17 @@
+<ion-view title="STI causes" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="stis.html">
+          <sti-menu choice-prefix="stiWhat"></sti-menu>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

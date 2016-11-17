@@ -1,0 +1,55 @@
+<ion-side-menus>
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="fade-in-out"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title menu">menu</h1>
+    </header>
+    <ion-content class="has-header">
+
+      <div ng-if="!getCurrentUser()">
+        <!-- user is not logged in -->
+        <ion-list>
+          <ion-item nav-clear menu-close ng-click="login()">
+            Login {{Object.keys(nav.currentUser)}}
+          </ion-item>
+          <ion-item nav-clear menu-close ng-click="register()">
+            Register
+          </ion-item>
+          <ion-item nav-clear menu-close ng-click="goBack()">
+            Back
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div ng-if="getCurrentUser()">
+        <!-- user is logged in -->
+        <ion-list>
+          <ion-item ng-if="showResume()" nav-clear menu-close ng-click="resumeVideo($event)">
+           Resume Video
+          </ion-item>
+          <ion-item nav-clear menu-close ng-click="logout()">
+            Logout
+          </ion-item>
+          <ion-item nav-clear menu-close href="#/app/activate">
+           {{getCurrentUser().activation_codes.length ? 'License' : 'Activate'}}
+          </ion-item>
+          <ion-item ng-if="!isActivated()" nav-clear menu-close href="#/app/section/openpreview">
+            Return to Preview
+          </ion-item>
+          <ion-item ng-if="isActivated() && inLessons()" nav-clear menu-close href="#/app/lesson-code">
+            Lessons
+          </ion-item>
+          <ion-item nav-clear menu-close ng-if="hasJessicasRoom()" href="#/app/section/jessica">
+            Jessica's Room
+          </ion-item>
+        </ion-list>
+      </div>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

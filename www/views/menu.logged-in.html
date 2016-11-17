@@ -1,0 +1,15 @@
+
+<ion-list>
+  <ion-item ng-if="userIsNotWatchingVideo" nav-clear menu-close ng-click="resumeVideo($event)">
+   Resume Video
+  </ion-item>
+  <ion-item nav-clear menu-close ng-click="logout()">
+    Logout
+  </ion-item>
+  <ion-item nav-clear menu-close href="#/app/activate">
+   {{getCurrentUser().activation_codes.length ? 'License' : 'Activate'}}
+  </ion-item>
+  <ion-item nav-clear menu-close ng-if="hasJessicaRoom" href="#/app/jessica">
+    Jessica Room
+  </ion-item>
+</ion-list>

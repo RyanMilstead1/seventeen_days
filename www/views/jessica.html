@@ -1,0 +1,34 @@
+<ion-view title="Jessica" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="jessicamenu.html">
+          <choice-menu background="room1.jpg">
+            <div class="jess-notepad choiceBtn"></div>
+            <choice-btn link-class="gynecologist-button" choice="jessicachoice1a"></choice-btn>
+            <choice-btn link-class="birthControl-button" choice="jessicachoice1b"></choice-btn>
+            <choice-btn link-class="body-button" choice="jessicachoice1c"></choice-btn>
+            <choice-btn link-class="sti-button" choice="jessicachoice1d"></choice-btn>
+            <choice-btn link-class="jess-postnote" choice="jessicachoice1e"></choice-btn>
+            <choice-btn link-class="jess-friends" choice="jessicachoice1f"></choice-btn>
+            <choice-btn link-class="play-button" section="open"></choice-btn>
+            <a class="quit-button choiceBtn" ng-click="logout()"></a>
+          </choice-menu>
+        </div>
+        <choice-menu-cog-btn background="gynecog1.jpg" ng-switch-when="gynecog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="gynecog2.jpg" ng-switch-when="gynecog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="bccog1.jpg" ng-switch-when="bccog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="bccog2.jpg" ng-switch-when="bccog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="bccog3.jpg" ng-switch-when="bccog3.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="opencog2.jpg" ng-switch-when="opencog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="opencog3.jpg" ng-switch-when="opencog3.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

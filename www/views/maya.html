@@ -1,0 +1,48 @@
+<ion-view title="Maya" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="mayachoice1.html">
+          <choice-menu background="mayachoice1.jpg">
+            <choice-btn link-class="mayaChoice1a" choice="mayachoice1a"></choice-btn>
+            <choice-btn link-class="mayaChoice1b" choice="mayachoice1b"></choice-btn>
+            <choice-btn link-class="mayaChoice1c" choice="mayachoice1c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="mayachoice2.html">
+          <choice-menu background="mayachoice2.jpg">
+            <choice-btn link-class="mayaChoice2c" choice="mayachoice2c"></choice-btn>
+            <choice-btn link-class="mayaChoice2a" choice="mayachoice2a"></choice-btn>
+            <choice-btn link-class="mayaChoice2b" choice="mayachoice2b"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="mayachoice3.html">
+          <choice-menu background="mayachoice3.jpg">
+            <choice-btn link-class="mayaChoice3b" choice="mayachoice3b"></choice-btn>
+            <choice-btn link-class="mayaChoice3a" choice="mayachoice3a"></choice-btn>
+            <choice-btn link-class="mayaChoice3c" choice="mayachoice3c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="mayachoice4.html">
+          <choice-menu background="mayachoice4.jpg">
+            <choice-btn link-class="mayaChoice4a" choice="mayachoice4a"></choice-btn>
+            <choice-btn link-class="mayaChoice4c" choice="mayachoice4c"></choice-btn>
+            <choice-btn link-class="mayaChoice4b" choice="mayachoice4b"></choice-btn>
+          </choice-menu>
+        </div>
+        <choice-menu-cog-btn link-class="mayaCog1" background="mayacog1.jpg" ng-switch-when="mayacog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="mayaCog2" background="mayacog2.jpg" ng-switch-when="mayacog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="mayaCog3" background="mayacog3.jpg" ng-switch-when="mayacog3.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="mayaCog4" background="mayacog4.jpg" ng-switch-when="mayacog4.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="mayaCog5" background="mayacog4-1.jpg" ng-switch-when="mayacog4-1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="mayaCog6" background="mayacog4-2.jpg" ng-switch-when="mayacog4-2.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

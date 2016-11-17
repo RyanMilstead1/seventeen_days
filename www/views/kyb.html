@@ -1,0 +1,29 @@
+<ion-view title="STI" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="kyb.html">
+          <choice-menu background="body_menu.jpg">
+            <choice-btn link-class="returnKYB" section="jessica"></choice-btn>
+            <choice-btn link-class="outerLabiaKYB" choice="kyb1"></choice-btn>
+            <choice-btn link-class="urethraKYB" choice="kyb2"></choice-btn>
+            <choice-btn link-class="vaginalOpeningKYB" choice="kyb3"></choice-btn>
+            <choice-btn link-class="clitorisKYB" choice="kyb4"></choice-btn>
+            <choice-btn link-class="innerLabiaKYB" choice="kyb5"></choice-btn>
+            <choice-btn link-class="fallopianTubesKYB" choice="kyb6"></choice-btn>
+            <choice-btn link-class="ovariesKYB" choice="kyb7"></choice-btn>
+            <choice-btn link-class="uterusKYB" choice="kyb8"></choice-btn>
+            <choice-btn link-class="cervixKYB" choice="kyb9"></choice-btn>
+            <choice-btn link-class="vaginaKYB" choice="kyb10"></choice-btn>
+          </choice-menu>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

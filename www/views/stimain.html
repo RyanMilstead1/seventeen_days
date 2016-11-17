@@ -1,0 +1,27 @@
+<ion-view title="STI" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="sti-main.html">
+          <choice-menu background="notebook_menu.jpg">
+            <choice-btn link-class="causeSti" choice="stimn1a"></choice-btn>
+            <choice-btn link-class="knowSti" choice="stimn2a"></choice-btn>
+            <choice-btn link-class="getSti" choice="stimn3a"></choice-btn>
+            <choice-btn link-class="haveSti" choice="stimn4a"></choice-btn>
+            <choice-btn link-class="symptomSti" choice="stimn5a"></choice-btn>
+            <choice-btn link-class="mainSti" choice="stimn6a"></choice-btn>
+            <choice-btn link-class="plushies" choice="stimn7a"></choice-btn>
+            <!-- <choice-btn link-class="riskSti" choice="stimn8a"></choice-btn> -->
+            <choice-btn link-class="goBackSti" section="jessica"></choice-btn>
+          </choice-menu>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

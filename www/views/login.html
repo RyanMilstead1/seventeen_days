@@ -1,0 +1,63 @@
+<ion-view title="Login" class="anim-in-out anim-fade" data-anim-in-speed="1000" data-anim-sync="true" hide-nav-bar="true">
+  <menu-btn btn-class="menu-btn--dark"></menu-btn>
+  <ion-content class="login-view">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col col-75">
+          <h2>Login</h2>
+          <div>
+            <button class="button twitter-login-btn item-icon-left" ng-click="loginTo('twitter')">
+              <i class="icon ion-social-twitter"></i>
+              Login with Twitter
+            </button>
+            <button class="button facebook-login-btn item-icon-left" ng-click="loginTo('facebook')">
+              <i class="icon ion-social-facebook"></i>
+              Login with Facebook
+            </button> 
+            <button class="button instagram-login-btn item-icon-left" ng-click="loginTo('instagram')">
+              <i class="icon ion-social-instagram"></i>
+              Login with Instagram
+            </button>
+          </div>
+          <form name="login-form" class="login-form" data-ng-submit="loginTo('default')" >
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" id="email" name="email" placeholder="Enter Email"
+                           data-ng-model="creds.email" class="form-control" >
+                </label>
+                <label class="item item-input">
+                    <input type="password" id="password" name="password" placeholder="Enter Password"
+                           data-ng-model="creds.password" class="form-control" >
+                </label>
+                <label>
+                    <input class="button button-positive submit-button" id="submit-login" type="submit" value="Login">
+                </label>
+
+                <div class="fp-register-container">
+                    <a ui-sref="app.register">Register</a>
+                    <a ui-sref="app.reset-request">Forgot Password?</a>
+                </div>
+
+                <div data-ng-controller="MessageCtrl" class="message-section">
+                    <label data-ng-if="currentError">
+                        <div class="alert alert-danger alert-dismissable">
+                            {{currentError}}
+                            <button class="close icon ion-ios7-close" data-ng-click="clearError()"></button>
+                        </div>
+                    </label>
+                    <label data-ng-if="currentInfo">
+                        <div class="info">
+                            {{currentInfo}}
+                            <button class="close icon ion-ios7-close" data-ng-click="clearInfo()"></button>
+                        </div>
+                    </label>
+                </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

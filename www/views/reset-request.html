@@ -1,0 +1,36 @@
+<ion-view title="Password Reset Request" class="anim-in-out anim-fade" data-anim-in-speed="1000" data-anim-sync="true" hide-nav-bar="true">
+  <menu-btn btn-class="menu-btn--dark"></menu-btn>
+  <ion-content class="login-view">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col col-75">
+        <h1>Seventeen Days Password Reset Request</h1>
+        <form name="reset-password-form" class="login-form" data-ng-submit="requestPasswordReset(creds)" >
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" id="email" name="email" placeholder="Enter Email"
+                       data-ng-model="creds.email" class="form-control" >
+            </label>
+            <label>
+                <input class="button button-positive submit-button" id="request-reset-token" type="submit" value="Request Reset">
+            </label>
+            <div data-ng-controller="MessageCtrl" class="message-section">
+                <label data-ng-if="currentError">
+                    <div class="alert alert-danger alert-dismissable">
+                        {{currentError}}
+                        <button class="close icon ion-ios7-close" data-ng-click="clearError()"></button>
+                    </div>
+                </label>
+                <label data-ng-if="currentInfo">
+                    <div class="info">
+                        {{currentInfo}}
+                        <button class="close icon ion-ios7-close" data-ng-click="clearInfo()"></button>
+                    </div>
+                </label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

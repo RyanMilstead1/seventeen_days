@@ -1,0 +1,83 @@
+<ion-view title="Activation" 
+  class="anim-in-out anim-fade" 
+  data-anim-in-speed="1000" 
+  data-anim-sync="true" 
+  hide-nav-bar="true"
+>
+  <menu-btn btn-class="menu-btn--dark"></menu-btn>
+  <ion-content class="login-view">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col col-75">
+
+        <h2>Register an activation code</h2>
+        <form name="login-form" 
+          class="login-form ng-pristine ng-valid" 
+          data-ng-submit="register(activationCode); activationCode = ''">
+          <div class="list">
+            <label class="item item-input">
+                <input 
+                  type="text" 
+                  id="activationCode"
+                  placeholder="Enter Code" 
+                  data-ng-model="activationCode"
+                  class="form-control"
+                />
+            </label>
+            
+            <label>
+                <input 
+                  ng-disabled="!activationCode.length" 
+                  ng-hide="activationCodeInvalid"
+                  class="button button-positive submit-button" 
+                  id="submit-login" type="submit" value="Register" />                        
+            </label>
+
+          </div>
+        </form>
+        <div class="message-section">
+          <div 
+            ng-if="activationCodeInvalid" 
+            data-ng-click="clearError()"
+            class="alert alert-danger alert-dismissable">
+            {{activationCodeInvalid}}            
+            <button 
+              type="button"
+              class="close icon ion-ios7-close"
+            ></button>
+          </div>
+        </div>           
+      </div>     
+    </div>
+
+    <div class="row">
+      <div class="col">&nbsp;</div>
+    </div>
+
+    <div class="row">
+      <div class="col"></div>
+      <div class="col col-75">
+
+        <div ng-if="_user.activation_codes.length" class="col col-75">
+          <h2>Your activation code(s)</h2>
+          <div class="list">
+            <div class="row">
+              <div class="col">expired?</div>
+              <div class="col">code</div>
+              <div class="col">activated</div>
+              <div class="col">expiry</div>
+            </div>
+            <div class="row" ng-repeat="activationCode in _user.activation_codes">
+              <div class="col">{{activationCode.expired ? 'yes':'no'}}</div>
+              <div class="col">{{activationCode.code}}</div>
+              <div class="col">{{activationCode.activated_on | date: 'longDate'}}</div>
+              <div class="col">{{activationCode.expires_on | date: 'longDate'}}</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

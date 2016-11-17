@@ -1,0 +1,16 @@
+<ion-view title="Lesson 5" class="anim-in-out anim-fade" data-anim-in-speed="1000" data-anim-sync="true" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <choice-menu-cog-btn background="gynecog1.jpg" ng-switch-when="gynecog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn background="gynecog2.jpg" ng-switch-when="gynecog2.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

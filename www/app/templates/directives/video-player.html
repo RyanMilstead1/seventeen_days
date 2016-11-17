@@ -1,0 +1,26 @@
+<div class="videogular-container">
+  <videogular
+    vg-player-ready="vm.onPlayerReady($API)"
+    vg-change-source="vm.changeSource"
+    vg-update-time="vm.onUpdateTime($currentTime, $duration)"
+    vg-auto-play="config.autoPlay"
+    vg-complete="vm.onCompleteVideo()"
+    vg-theme="config.theme.url"
+    vg-responsive="config.responsive"
+    vg-plays-inline="config.inline">
+    <vg-media
+      vg-src="vm.videoSources"
+      vg-preload="config.preload">
+    </vg-media>
+    <vg-controls vg-autohide="config.autoHide" vg-autohide-time="config.autoHideTime">
+      <vg-play-pause-button></vg-play-pause-button>
+      <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+      <vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffer></vg-scrub-bar-buffer>
+      </vg-scrub-bar>
+    </vg-controls>
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering></vg-buffering>
+  </videogular>
+</div>

@@ -1,0 +1,21 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="survey-title title">Please take a minute to answer this survey...</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+  <ion-content class="padding white-background">
+    <div class="list">
+      <label class="item item-input item-text-wrap" ng-repeat="question in survey.questions">
+        <div class="bar bar-header bar-stable">
+          <h2>{{question.question}}</h2>
+        </div>
+        <div class="question-answers">
+          <ion-radio ng-repeat="answer in question.answers" ng-model="responses[question.id].answer_id" ng-value="answer.id" name="{{question.id}}">
+            {{answer.answer}}
+          </ion-radio>
+        </div>
+      </label>
+      <button class="button button-full ng-class:buttonType" ng-click="submitSurveyResponses(responses)">{{buttonText}}</button>
+    </div>
+  </ion-content>
+</ion-modal-view>

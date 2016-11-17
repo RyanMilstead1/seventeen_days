@@ -1,0 +1,48 @@
+<ion-view title="Hailey" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="haileychoice1.html">
+          <choice-menu background="haileychoice1.jpg">
+            <choice-btn link-class="haileyChoice1a" choice="haileychoice1a"></choice-btn>
+            <choice-btn link-class="haileyChoice1b" choice="haileychoice1b"></choice-btn>
+            <choice-btn link-class="haileyChoice1c" choice="haileychoice1c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="haileychoice2.html">
+          <choice-menu background="haileychoice2.jpg">
+            <choice-btn link-class="haileyChoice2c" choice="haileychoice2c"></choice-btn>
+            <choice-btn link-class="haileyChoice2a" choice="haileychoice2a"></choice-btn>
+            <choice-btn link-class="haileyChoice2b" choice="haileychoice2b"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="haileychoice3.html">
+          <choice-menu background="haileychoice3.jpg">
+            <choice-btn link-class="haileyChoice3b" choice="haileychoice3b"></choice-btn>
+            <choice-btn link-class="haileyChoice3a" choice="haileychoice3a"></choice-btn>
+            <choice-btn link-class="haileyChoice3c" choice="haileychoice3c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="haileychoice4.html">
+          <choice-menu background="haileychoice4.jpg">
+            <choice-btn link-class="haileyChoice4a" choice="haileychoice4a"></choice-btn>
+            <choice-btn link-class="haileyChoice4c" choice="haileychoice4c"></choice-btn>
+            <choice-btn link-class="haileyChoice4b" choice="haileychoice4b"></choice-btn>
+          </choice-menu>
+        </div>
+        <choice-menu-cog-btn link-class="haileyCog1" background="haileycog1.jpg" ng-switch-when="haileycog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="haileyCog2" background="haileycog2.jpg" ng-switch-when="haileycog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="haileyCog3" background="haileycog3.jpg" ng-switch-when="haileycog3.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="haileyCog4" background="haileycog4.jpg" ng-switch-when="haileycog4.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="haileyCog5" background="haileycog4-1.jpg" ng-switch-when="haileycog4-1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="haileyCog6" background="haileycog4-2.jpg" ng-switch-when="haileycog4-2.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view title="Nicki" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="nickichoice1.html">
+          <choice-menu background="nickichoice1.jpg">
+            <choice-btn link-class="nickiChoice1a" choice="nickichoice1a"></choice-btn>
+            <choice-btn link-class="nickiChoice1b" choice="nickichoice1b"></choice-btn>
+            <choice-btn link-class="nickiChoice1c" choice="nickichoice1c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="nickichoice2.html">
+          <choice-menu background="nickichoice2.jpg">
+            <choice-btn link-class="nickiChoice2c" choice="nickichoice2c"></choice-btn>
+            <choice-btn link-class="nickiChoice2a" choice="nickichoice2a"></choice-btn>
+            <choice-btn link-class="nickiChoice2b" choice="nickichoice2b"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="nickichoice3.html">
+          <choice-menu background="nickichoice3.jpg">
+            <choice-btn link-class="nickiChoice3b" choice="nickichoice3b"></choice-btn>
+            <choice-btn link-class="nickiChoice3a" choice="nickichoice3a"></choice-btn>
+            <choice-btn link-class="nickiChoice3c" choice="nickichoice3c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="nickichoice4.html">
+          <choice-menu background="nickichoice4.jpg">
+            <choice-btn link-class="nickiChoice4a" choice="nickichoice4a"></choice-btn>
+            <choice-btn link-class="nickiChoice4c" choice="nickichoice4c"></choice-btn>
+            <choice-btn link-class="nickiChoice4b" choice="nickichoice4b"></choice-btn>
+          </choice-menu>
+        </div>
+        <choice-menu-cog-btn link-class="nickiCog1" background="nickicog1.jpg" ng-switch-when="nickicog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="nickiCog2" background="nickicog2.jpg" ng-switch-when="nickicog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="nickiCog3" background="nickicog3.jpg" ng-switch-when="nickicog3.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="nickiCog4" background="nickicog4.jpg" ng-switch-when="nickicog4.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="nickiCog5" background="nickicog4-1.jpg" ng-switch-when="nickicog4-1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="nickiCog6" background="nickicog4-2.jpg" ng-switch-when="nickicog4-2.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view title="Eva" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="SectionCtrl as vm">
+      <div ng-switch on="vm.positionInTime.type">
+        <div ng-switch-when="mp4">
+          <video-player></video-player>
+        </div>
+      </div>
+      <div ng-switch on="vm.positionInTime.value">
+        <div ng-switch-when="evachoice1.html">
+          <choice-menu background="evachoice1.png">
+            <choice-btn link-class="evaChoice1a" choice="evachoice1a"></choice-btn>
+            <choice-btn link-class="evaChoice1b" choice="evachoice1b"></choice-btn>
+            <choice-btn link-class="evaChoice1c" choice="evachoice1c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="evachoice2.html">
+          <choice-menu background="evachoice2.png">
+            <choice-btn link-class="evaChoice2b" choice="evachoice2a"></choice-btn>
+            <choice-btn link-class="evaChoice2a" choice="evachoice2b"></choice-btn>
+            <choice-btn link-class="evaChoice2c" choice="evachoice2c"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="evachoice3.html">
+          <choice-menu background="evachoice3.png">
+            <choice-btn link-class="evaChoice3a" choice="evachoice3a"></choice-btn>
+            <choice-btn link-class="evaChoice3c" choice="evachoice3c"></choice-btn>
+            <choice-btn link-class="evaChoice3b" choice="evachoice3b"></choice-btn>
+          </choice-menu>
+        </div>
+        <div ng-switch-when="evachoice4.html">
+          <choice-menu background="evachoice4.png">
+            <choice-btn link-class="evaChoice4b" choice="evachoice4b"></choice-btn>
+            <choice-btn link-class="evaChoice4a" choice="evachoice4a"></choice-btn>
+            <choice-btn link-class="evaChoice4c" choice="evachoice4c"></choice-btn>
+          </choice-menu>
+        </div>
+        <choice-menu-cog-btn link-class="evaCog1" background="evacog1.png"
+          ng-switch-when="evacog1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="evaCog2" background="evacog2.png"
+          ng-switch-when="evacog2.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="evaCog3" background="evacog3.png"
+          ng-switch-when="evacog3.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="evaCog4" background="evacog4.png"
+          ng-switch-when="evacog4.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="evaCog5" background="evacog4-1.png"
+          ng-switch-when="evacog4-1.html"></choice-menu-cog-btn>
+        <choice-menu-cog-btn link-class="evaCog6" background="evacog4-2.png"
+          ng-switch-when="evacog4-2.html"></choice-menu-cog-btn>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

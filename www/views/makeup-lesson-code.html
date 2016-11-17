@@ -1,0 +1,17 @@
+<ion-view view-title="LessonCode" class="anim-in-out anim-fade" data-anim-in-speed="1000" data-anim-sync="true" hide-nav-bar="true">
+  <menu-btn></menu-btn>
+  <ion-content>
+    <div ng-controller="LessonCodeCtrl">
+      <choice-menu background="{{makeupBackground}}">
+        <a class="choiceBtn makeup-lesson1" ng-click="startMakeupLesson(1)"></a>
+        <a class="choiceBtn makeup-lesson2" ng-click="startMakeupLesson(2)"></a>
+        <a class="choiceBtn makeup-lesson3" ng-click="startMakeupLesson(3)"></a>
+        <a class="choiceBtn makeup-lesson4" ng-click="startMakeupLesson(4)"></a>
+        <a class="choiceBtn makeup-lesson5" ng-click="startMakeupLesson(5)"></a>
+        <a class="choiceBtn makeup-lesson6" ng-click="startMakeupLesson(6)"></a>
+        <a class="choiceBtn makeup-lesson7" ng-click="startMakeupLesson(7)"></a>
+        <a class="choiceBtn makeup-back" ui-sref="app.lesson-code"></a>
+      </choice-menu>
+    </div>
+  </ion-content>
+</ion-view>

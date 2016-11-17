@@ -1,0 +1,6 @@
+<a class="{{linkClass}} {{btnClass}}"
+  on-touch="overClass = linkClass + '--over'"
+  on-release="overClass = ''"
+  ng-class="overClass"
+  ng-click="section ? vm.selectSection(section) : vm.moveTimeline(choice)"></a>
+
